@@ -1,0 +1,87 @@
+Backend is just a server. A server is a computer that serves content.
+Computers meant to be communicateed with by other computers using a specific protocol or communication method.
+Backend web applications use HyperText Transfer Protocol to receive and return data from other computers. e.g devices using browsers, etc.
+HTTP is based on the Request, Response Cycle
+  Request: method, identifier, [data]
+  Response: status code, [data]
+  Nomenclature:
+    Response Head refers to status code and key-values
+    Response Body refers to the (optional) data
+
+GET /anything HTTP/1.1 - getting information
+  Accept: */*
+POST /anything HTTP/1.1 - sending information
+  Accept: application/json, */*
+  Content-Type: application/json
+
+HTTP Request Methods:
+GET - Head + Body
+POST - (New Data)
+PUT - (Update Data)
+PATCH - (Partial Data)
+DELETE -
+HEAD - Head Only
+OPTIONS - Methods Allowed
+
+Response Codes
+100s - Informational responses (4)
+200s - Successes (10)
+300s - Redirection (9)
+400s - Failure due to Client Error (28)
+500s - Failure due ti Server Error (11)
+
+Total: 62 responses
+Codes are non sequential: 451 is a valid code, but  450 is not!
+You don't need to remember the all of them, you're not Alien.
+
+Most Frequent Codes
+200 - OK
+201 - Created
+204 - No Content (Gets used for DELETE mostly)
+400 - Bad Request (No idea what you asked for)
+403 - Forbidden (Authorization)
+404 - Not Found (Resource you're looking for can't be found)
+405 - Method Not Allowed (Mainly used in APIs, OPTIONS)
+301 - Moved Permanently
+
+Frontends - Mobile Applications, Wearable Devices, Computer with Browsers, Embedded Devices and IoT
+Backend - Server it's communicating with
+
+We will focus on Backend and most specifically Django.
+
+Resource Identification and Method and Data Handling
+Views are the heart of our application because we seek to build an application that speaks HTTP.
+
+HTTP communicates entirely using strings.
+Computers store data in memory:
+  Blocks
+  Serial Structures
+  Trees
+  Graphs
+Convert data in a simplified, serial format such that the original data may be recreated
+In the context of web applications "serial" usually implies a string a human-readable data
+
+Serial Options:
+  Markup Languages - Extensible Markup Language: XML, HTML
+  Data Interchange Languages - used to organize data, JSON, YAML(YAML Ain't Markup Language)
+
+ HTML for displaying data in the browser
+ JSON has become default due to JavaScript frontends
+
+Django: Python Framework
+PHP and JavaScript: languages like Python
+Python versus Ruby versus PHP versus JavaScript
+Django versus Rails versus Laravel versus Express
+
+Django used by Washington Post, Instagram, Pinterest, Reddit
+
+REST is acronym for REpresentational State Transfer. It is an architechuural style, an approach to communications that
+is often used in the development of web services.
+
+API Endpoints:
+  GET: /api/Category - Retrieve all categories
+  POST: /api/Category - Add a new category
+  PUT: /api/Category - Update a category
+  DELETE: /api/Category - Delete a category
+  GET - /api/Comment - Retrieve all the stored comments
+  POST - /api/Comment - Add new comment 
